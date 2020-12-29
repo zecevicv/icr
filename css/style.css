@@ -1104,6 +1104,7 @@ button {
 ================================================== */
 .environment {
   color: white;
+  overflow: hidden;
 }
 
 .environment .img-block {
