@@ -64,13 +64,109 @@ new Swiper('.the-appartments .swiper-container', {
   }
 });
 
+document.querySelectorAll('.typical-appartments .swiper-container').forEach((slider) => {
+  new Swiper(slider, {
+    allowTouchMove: false,
+    slidesPerView: 5,
+    slidesPerColumn: 2,
+    slidesPerGroup: 5,
+    slidesPerColumnFill: 'row',
+    direction: 'horizontal',
+    uniqueNavElements: true,
+    breakpoints: {
+      0: {
+        allowTouchMove: true,
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 2,
+      },
+      1024: {
+        allowTouchMove: false,
+        slidesPerView: 5,
+        slidesPerColumn: 2,
+        slidesPerGroup: 5,
+      },
+    },
+    pagination: {
+      el: slider.closest('.appartment-types').querySelector('.swiper-pagination'),
+    },
+    navigation: {
+      nextEl: slider.closest('.appartment-types').querySelector('.swiper-button-next'),
+      prevEl: slider.closest('.appartment-types').querySelector('.swiper-button-prev'),
+    },
+  });
+});
+
+
 /* #Environment Sliders
   ======================================================= */
 new Swiper('.environment-slider .swiper-container', {
   slidesPerView: 1,
+  loop: true,
   pagination: {
     el: '.environment-slider .swiper-pagination',
   },
+  navigation: {
+    nextEl: '.environment-slider .swiper-button-next',
+    prevEl: '.environment-slider .swiper-button-prev',
+  },
+});
+
+/* #Company Sliders
+  ======================================================= */
+new Swiper('.company-block-2 .swiper-container', {
+  allowTouchMove: false,
+  slidesPerView: 2,
+  slidesPerColumn: 2,
+  slidesPerGroup:2,
+  slidesPerColumnFill: 'row',
+  direction: 'horizontal',
+  pagination: {
+    el: '.company-block-2 .swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.company-block-2 .swiper-button-next',
+    prevEl: '.company-block-2 .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2.5,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+      allowTouchMove: true,
+      centeredSlides: true,
+      loop: true
+    },
+    1024: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup:2,
+      allowTouchMove: false
+    }
+  }
+});
+
+new Swiper('.company-block-3 .swiper-container', {
+  allowTouchMove: false,
+  slidesPerView: 3,
+  pagination: {
+    el: '.company-block-3 .swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.company-block-3 .swiper-button-next',
+    prevEl: '.company-block-3 .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      allowTouchMove: true,
+      loop: true
+    },
+    1024: {
+      slidesPerView: 3,
+      allowTouchMove: false,
+    }
+  }
 });
 
 /* #Hamburger Menu
@@ -102,6 +198,11 @@ document.addEventListener('click', (e) => {
 const youtubePopupLink = document.querySelector('.hero-youtube');
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal-close');
+
+modal.style.display = 'none';
+setTimeout(() => {
+  modal.style.display = 'block';
+}, 250);
 
 youtubePopupLink.addEventListener('click', (e) => {
   e.preventDefault();
