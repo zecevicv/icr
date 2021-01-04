@@ -40,13 +40,28 @@ document.addEventListener('click', (e) => {
 
 /* #Collapses
     ======================================================= */
-document.querySelector('.project .project-block-1 p span').addEventListener('click', (e) => {
-  document.querySelector('.project .project-block-1 .collapse').classList.add('show');
+document.querySelector('.project .collapse-toggler').addEventListener('click', (e) => {
+  const collapseToggler = document.querySelector('.project .collapse-toggler');
+  const collapse = document.querySelector('.project .project-block-1 .collapse');
+  collapse.classList.toggle('show');
+
+  if (collapse.classList.contains('show')) {
+    collapseToggler.innerHTML = 'סגור';
+  } else {
+    collapseToggler.innerHTML = '...קרא עוד';
+  }
 })
 
-document.querySelectorAll('.company-block-3 .company-info p span').forEach((collapseToggler) => {
+document.querySelectorAll('.company-block-3 .company-info .collapse-toggler').forEach((collapseToggler) => {
   collapseToggler.addEventListener('click', (e) => {
-    collapseToggler.closest('.text-block').querySelector('.collapse').classList.add('show');
+    const collapse = collapseToggler.closest('.text-block').querySelector('.collapse');
+    collapse.classList.toggle('show');
+
+    if (collapse.classList.contains('show')) {
+      collapseToggler.innerHTML = 'סגור';
+    } else {
+      collapseToggler.innerHTML = '...קרא עוד';
+    }
   })
 });
 
