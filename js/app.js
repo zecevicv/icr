@@ -38,6 +38,18 @@ document.addEventListener('click', (e) => {
   }
 });
 
+/* #Collapses
+    ======================================================= */
+document.querySelector('.project .project-block-1 p span').addEventListener('click', (e) => {
+  document.querySelector('.project .project-block-1 .collapse').classList.add('show');
+})
+
+document.querySelectorAll('.company-block-3 .company-info p span').forEach((collapseToggler) => {
+  collapseToggler.addEventListener('click', (e) => {
+    collapseToggler.closest('.text-block').querySelector('.collapse').classList.add('show');
+  })
+});
+
 /* #Youtube Popup
   ======================================================= */
 const youtubePopupLink = document.querySelector('.hero-youtube');
@@ -107,17 +119,28 @@ tabLinksGroup.forEach((tabLinkGroup) => {
 window.addEventListener('load', () => {
   /* #Appartments Sliders
     ======================================================= */
-  new Swiper('.the-appartments .swiper-container', {
-    slidesPerView: 1.22,
-    breakpoints: {
-      0: {
-        slidesPerView: 1.1
+  document.querySelectorAll('.the-appartments .swiper-container').forEach((slider) => {
+    new Swiper(slider, {
+      slidesPerView: 1.22,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1
+        },
+        1024: {
+          slidesPerView: 1.22
+        },
       },
-      1024: {
-        slidesPerView: 1.22
+      pagination: {
+        el: slider.closest('.tab-pane').querySelector('.swiper-pagination'),
       },
-    }
+      navigation: {
+        nextEl: slider.closest('.tab-pane').querySelector('.swiper-button-next'),
+        prevEl: slider.closest('.tab-pane').querySelector('.swiper-button-prev'),
+      },
+    });
   });
+
+  
 
   document.querySelectorAll('.typical-appartments .swiper-container').forEach((slider) => {
     new Swiper(slider, {
@@ -230,9 +253,5 @@ AOS.init({
   startEvent: 'load',
   once: true,
   duration: 800,
-  offset: 300,
-  disable: function () {
-    var maxWidth = 1024;
-    return window.innerWidth < maxWidth;
-  }
+  offset: 300
 });

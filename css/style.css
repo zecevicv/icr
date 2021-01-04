@@ -117,7 +117,7 @@ button {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: bold!important;
 }
 
 /* #Buttons & Links
@@ -330,6 +330,7 @@ button {
 .hero {
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
 .hero .container {
@@ -375,6 +376,7 @@ button {
   bottom: 2.35vw;
   left: 50%;
   transform: translate(-50%, 0);
+  animation: jump 1.25s infinite;
 }
 
 .hero-scroll img {
@@ -409,6 +411,18 @@ button {
   display: none;
 }
 
+@keyframes jump {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -50%); }
+  100% { transform: translate(-50%, 0); }
+}
+
+@keyframes jump-mobile {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(0, -50%); }
+  100% { transform: translate(0, 0); }
+}
+
 @media (max-width: 1023.98px) {
   .hero .container {
     width: 79%;
@@ -434,8 +448,9 @@ button {
 
   .hero-scroll {
     position: static;
-    transform: none;
+    transform: translate(0, 0);
     margin-bottom: 6.66vw;
+    animation: jump-mobile 1.25s infinite;
   }
   
   .hero-scroll img {
@@ -520,6 +535,7 @@ button {
   margin: 0 auto;
   padding: 5.5vw 0;
   font-weight: 100;
+  overflow: hidden;
 }
 
 .project .text-block span {
@@ -564,6 +580,10 @@ button {
 
 .project .project-block-1 p:not(:last-child) {
   margin-bottom: 1.4vw;
+}
+
+.project .project-block-1 p span {
+  display: none;
 }
 
 .project .project-block-1 .project-partners {
@@ -667,6 +687,20 @@ button {
   
   .project .project-block-1 p:not(:last-child) {
     margin-bottom: 6vw;
+  }
+
+  .project .project-block-1 p span {
+    display: inline;
+  }
+
+  .project .project-block-1 .collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+
+  .project .project-block-1 .collapse.show {
+    max-height: 93vw;
   }
   
   .project .project-block-1 .project-partners {
@@ -779,6 +813,12 @@ button {
   padding-right: 1.82vw;
 }
 
+.the-appartments .swiper-navigation {
+  margin-top: 2.6vw;
+  margin-right: auto;
+  width: 80%;
+}
+
 .the-appartments .appartment-preview {
   position: relative;
   color: white;
@@ -835,14 +875,6 @@ button {
   letter-spacing: 0.016em;
 }
 
-.the-appartments .appartment-preview .arrow {
-  position: absolute;
-  top: 50%;
-  right: 2vw;
-  transform: translateY(-50%);
-  width: 2.7vw;
-}
-
 .typical-appartments {
   width: 76.5%;
   margin: 0 auto;
@@ -877,9 +909,6 @@ button {
 
 .typical-appartments .tab-content {
   width: 100%;
-}
-
-.typical-appartments .appartment-types {
 }
 
 .typical-appartments .appartment-types .swiper-navigation {
@@ -990,6 +1019,11 @@ button {
     padding-right: 3.73vw;
   }
 
+  .the-appartments .swiper-navigation {
+    margin-top: 8vw;
+    width: 100%;
+  }
+
   .the-appartments .appartment-preview .info {
     height: 51.28vw;
     width: 42%;
@@ -1007,10 +1041,6 @@ button {
   
   .the-appartments .appartment-preview .specifications {
     margin-top: 2.4vw;
-  }
-
-  .the-appartments .appartment-preview .arrow {
-    display: none;
   }
 
   .the-appartments .appartment-preview .text {
@@ -1213,6 +1243,10 @@ button {
 
 /* #Company
 ================================================== */
+.company {
+  overflow: hidden;
+}
+
 .company-block-1 {
   position: relative;
 }
@@ -1567,6 +1601,16 @@ button {
   .company-block-3 .company-info p:not(:last-child) {
     margin-bottom: 4vw;
   }
+
+  .company-block-3 .company-info .collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+  }
+
+  .company-block-3 .company-info .collapse.show {
+    max-height: 41vw;
+  }
   
   .company-block-3 .company-info .text-block img {
     height: 16vw;
@@ -1673,7 +1717,7 @@ button {
 @media (max-width: 1023.98px) {
   .footer .text-block {
     bottom: auto;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 82%;
