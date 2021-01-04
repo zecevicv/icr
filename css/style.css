@@ -1146,6 +1146,11 @@ button {
   width: 100%;
 }
 
+.environment .img-block iframe {
+  width: 100%;
+  height: 48vw;
+}
+
 .environment-block {
   position: relative;
 }
@@ -1197,6 +1202,10 @@ button {
 @media (max-width: 1023.98px) {
   .environment .img-block {
     margin-bottom: 13.6vw;
+  }
+
+  .environment .img-block iframe {
+    height: 68vw;
   }
 
   .environment-block {
