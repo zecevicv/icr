@@ -3,6 +3,9 @@
 
 <head>
 
+  <!-- Lazy Loading Plugin -->
+  <script src="js/lazysizes.min.js" async=""></script>
+
   <!-- Google Tag Manager -->
   <script>
     (function (w, d, s, l, i) {
@@ -175,15 +178,15 @@
         <div class="project-partners">
           <p class="f-d-3 f-m-3">השותפים שלנו:</p>
           <div class="imgs">
-            <img src="img/icons/logo-partner-1.svg" alt="partner-icon">
-            <img src="img/icons/logo-partner-2.png" alt="partner-icon">
+            <img class="lazyload" data-src="img/icons/logo-partner-1.svg" alt="partner-icon">
+            <img class="lazyload" data-src="img/icons/logo-partner-2.png" alt="partner-icon">
           </div>
         </div>
       </div>
       <div class="project-img" data-aos="fade-up" data-aos-anchor="#projectBlock1Anchor">
         <picture>
-          <source media="(min-width:1024px)" srcset="img/home/project-img-1.jpg">
-          <img src="img/home/project-img-1-mobile.jpg" alt="project-img">
+          <source media="(min-width:1024px)" data-srcset="img/home/project-img-1.jpg">
+          <img class="lazyload" data-src="img/home/project-img-1-mobile.jpg" alt="project-img">
         </picture>
       </div>
     </div>
@@ -191,14 +194,14 @@
     <div class="project-block-2" id="projectBlock2Anchor">
       <div class="project-star">
         <picture>
-          <source media="(min-width:1024px)" srcset="img/home/project-star.jpg">
-          <img src="img/home/project-star-mobile.jpg" alt="star-img">
+          <source media="(min-width:1024px)" data-srcset="img/home/project-star.jpg">
+          <img class="lazyload" data-src="img/home/project-star-mobile.jpg" alt="star-img">
         </picture>
       </div>
       <div class="project-img" data-aos="fade-up" data-aos-anchor="#projectBlock2Anchor">
         <picture>
-          <source media="(min-width:1024px)" srcset="img/home/project-img-2.jpg">
-          <img src="img/home/project-img-2-mobile.jpg" alt="project-img">
+          <source media="(min-width:1024px)" data-srcset="img/home/project-img-2.jpg">
+          <img class="lazyload" data-src="img/home/project-img-2-mobile.jpg" alt="project-img">
         </picture>
       </div>
       <div class="project-text" data-aos="fade-up" data-aos-delay="100" data-aos-anchor="#projectBlock2Anchor">
@@ -209,13 +212,13 @@
     </div>
     <!-- Luxury -->
     <div class="project-luxury">
-      <img src="img/home/project-luxury.svg" alt="luxury-img">
+      <img class="lazyload" data-src="img/home/project-luxury.svg" alt="luxury-img">
     </div>
     <!-- Img Block -->
     <div class="img-block">
       <picture>
-        <source media="(min-width:1024px)" srcset="img/home/sand.jpg">
-        <img src="img/home/sand-mobile.jpg" alt="sand-img">
+        <source media="(min-width:1024px)" data-srcset="img/home/sand.jpg">
+        <img class="lazyload" data-src="img/home/sand-mobile.jpg" alt="sand-img">
       </picture>
     </div>
   </div>
@@ -257,7 +260,6 @@
                     <p class="d-desktop">
                       גל של אושר מציף אותך. אתה לא יודע למה. אולי זו המנגינה של הגלים. אולי זו הבריזה. אולי אלו השקיעות
                       האינסופיות שגורמות לך לחתוך מוקדם הביתה מהעבודה. אתה גר 80 צעדים מהים. תתרגל לזה.
-
                     </p>
                     <p class="d-mobile">
                       גל של אושר מציף אותך. אתה לא יודע למה. אולי זו המנגינה של הגלים. אולי זו הבריזה. אולי אלו השקיעות
@@ -266,7 +268,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="swiper-navigation" style="display: none;">
@@ -338,7 +339,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-navigation">
             <div class="swiper-arrows">
               <div class="swiper-button-next"></div>
@@ -378,7 +378,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="swiper-navigation" style="display: none;">
@@ -426,7 +425,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="swiper-navigation" style="display: none;">
@@ -871,15 +869,15 @@
 
     <!-- Net Bg Img -->
     <div class="bg-net">
-      <img src="img/home/net.jpg" alt="net-img">
+      <img class="lazyload" data-src="img/home/net.jpg" alt="net-img">
     </div>
     <!-- Shell Bg Img -->
     <div class="bg-shell">
-      <img src="img/home/shell.jpg" alt="shell-img">
+      <img class="lazyload" data-src="img/home/shell.jpg" alt="shell-img">
     </div>
     <!-- Sand Bg Img -->
     <div class="bg-sand">
-      <img src="img/home/sand-3.jpg" alt="sand-img">
+      <img class="lazyload" data-src="img/home/sand-3.jpg" alt="sand-img">
     </div>
   </div>
 
@@ -887,7 +885,7 @@
   <div class="environment" id="environment">
     <!-- Img Block -->
     <div class="img-block">
-      <iframe src="https://in3dreal.net/tour/icrbatyam/index.html" frameborder="0" loading="lazy"
+      <iframe class="lazyload" data-src="https://in3dreal.net/tour/icrbatyam/index.html" frameborder="0" loading="lazy"
         allowfullscreen></iframe>
     </div>
     <!-- Block -->
@@ -895,8 +893,8 @@
       <div class="bg"></div>
       <div class="environment-img" data-aos="fade-left" data-aos-anchor="#environmentAnchor">
         <picture>
-          <source media="(min-width:1024px)" srcset="img/home/environment-img-2.jpg">
-          <img src="img/home/environment-img-2-mobile.jpg" alt="environment-img">
+          <source media="(min-width:1024px)" data-srcset="img/home/environment-img-2.jpg">
+          <img class="lazyload" data-src="img/home/environment-img-2-mobile.jpg" alt="environment-img">
         </picture>
       </div>
       <div class="environment-text" data-aos="fade-up" data-aos-delay="200" data-aos-anchor="#environmentAnchor">
@@ -914,7 +912,7 @@
           מושלם.</p>
       </div>
       <div class="environment-map" data-aos="fade-right" data-aos-delay="100" data-aos-anchor="#environmentAnchor">
-        <img src="img/home/environment-map.jpg" alt="map-img">
+        <img class="lazyload" data-src="img/home/environment-map.jpg" alt="map-img">
       </div>
     </div>
     <!-- Slider -->
@@ -923,44 +921,44 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_1.jpg">
-              <img src="img/gallery/mobile_1.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_1.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_1.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_2.jpg">
-              <img src="img/gallery/mobile_2.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_2.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_2.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_3.jpg">
-              <img src="img/gallery/mobile_3.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_3.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_3.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_4.jpg">
-              <img src="img/gallery/mobile_4.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_4.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_4.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_5.jpg">
-              <img src="img/gallery/mobile_5.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_5.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_5.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_6.jpg">
-              <img src="img/gallery/mobile_6.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_6.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_6.jpg" alt="environment-img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:1024px)" srcset="img/gallery/dektop_7.jpg">
-              <img src="img/gallery/mobile_7.jpg" alt="environment-img">
+              <source media="(min-width:1024px)" data-srcset="img/gallery/dektop_7.jpg">
+              <img class="lazyload" data-src="img/gallery/mobile_7.jpg" alt="environment-img">
             </picture>
           </div>
 
@@ -982,8 +980,8 @@
     <div class="company-block-1" id="companyBlock1">
       <div class="img-block">
         <picture>
-          <source media="(min-width:1024px)" srcset="img/home/sand-2.jpg">
-          <img src="img/home/sand-2-mobile.jpg" alt="sand-img">
+          <source media="(min-width:1024px)" data-srcset="img/home/sand-2.jpg">
+          <img class="lazyload" data-src="img/home/sand-2-mobile.jpg" alt="sand-img">
         </picture>
       </div>
       <div class="text-block">
@@ -1042,25 +1040,25 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-1.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-1.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">Midtown Live</figcaption>
                 </figure>
               </div>
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-2.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-2.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">W Tower</figcaption>
                 </figure>
               </div>
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-3.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-3.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">פריים W</figcaption>
                 </figure>
               </div>
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-4.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-4.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">רום</figcaption>
                 </figure>
               </div>
@@ -1119,19 +1117,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-5.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-5.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">מגדל אלקטרה</figcaption>
                 </figure>
               </div>
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-6.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-6.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">מלונות סטאי</figcaption>
                 </figure>
               </div>
               <div class="swiper-slide">
                 <figure>
-                  <img src="img/home/company-img-7.jpg" alt="company-img">
+                  <img class="lazyload" data-src="img/home/company-img-7.jpg" alt="company-img">
                   <figcaption class="f-d-3 f-m-3">מתחם אמפא</figcaption>
                 </figure>
               </div>

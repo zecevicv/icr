@@ -271,6 +271,13 @@ AOS.init({
   offset: 300
 });
 
+document.querySelectorAll('img')
+    .forEach((img) =>
+        img.addEventListener('load', () =>
+            AOS.refresh()
+        )
+    );
+
 
 
 function blockpage() {
