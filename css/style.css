@@ -8,7 +8,7 @@
 /* #Global
 ================================================== */
 html {
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 body {
@@ -90,34 +90,62 @@ button {
   }
 
   .d-none-mobile {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .text-primary {
-  color: var(--color-primary)!important;
+  color: var(--color-primary) !important;
 }
 
 /* #Typography
 ================================================== */
 /* Font Desktop (f-d) */
-.f-d-1 {font-size: 0.72vw!important;}
-.f-d-2 {font-size: 0.88vw!important;}
-.f-d-3 {font-size: 1.04vw!important;}
-.f-d-4 {font-size: 1.562vw!important;}
-.f-d-5 {font-size: 2.604vw!important;}
+.f-d-1 {
+  font-size: 0.72vw !important;
+}
+
+.f-d-2 {
+  font-size: 0.88vw !important;
+}
+
+.f-d-3 {
+  font-size: 1.04vw !important;
+}
+
+.f-d-4 {
+  font-size: 1.562vw !important;
+}
+
+.f-d-5 {
+  font-size: 2.604vw !important;
+}
 
 /* Font Mobile (f-m) */
 @media (max-width: 1023.98px) {
-  .f-m-1 {font-size: 2.75vw!important;}
-  .f-m-2 {font-size: 3.35vw!important;}
-  .f-m-3 {font-size: 4.00vw!important;}
-  .f-m-4 {font-size: 4.65vw!important;}
-  .f-m-5 {font-size: 6.75vw!important;}
+  .f-m-1 {
+    font-size: 2.75vw !important;
+  }
+
+  .f-m-2 {
+    font-size: 3.35vw !important;
+  }
+
+  .f-m-3 {
+    font-size: 4.00vw !important;
+  }
+
+  .f-m-4 {
+    font-size: 4.65vw !important;
+  }
+
+  .f-m-5 {
+    font-size: 6.75vw !important;
+  }
 }
 
 .bold {
-  font-weight: bold!important;
+  font-weight: bold !important;
 }
 
 /* #Buttons & Links
@@ -154,7 +182,7 @@ button {
 }
 
 .btn-primary-outline:hover {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, .1);
 }
 
 .btn-secondary {
@@ -204,7 +232,7 @@ button {
 }
 
 .header.header-dark {
-  background-color:  #00183eda;
+  background-color: #00183eda;
   padding: 1vw 0;
 }
 
@@ -268,7 +296,7 @@ button {
   }
 
   .header.menu-open {
-    background-color:  #00183eda;
+    background-color: #00183eda;
   }
 
   .header .container {
@@ -279,7 +307,7 @@ button {
   .header-hamburger {
     display: block;
   }
-  
+
   .header-hamburger img {
     width: 9.45vw;
   }
@@ -301,7 +329,7 @@ button {
     bottom: 0;
     right: 0;
     transform: translate(100%, 100%);
-    background-color:  #00183eda;
+    background-color: #00183eda;
     height: 100vh;
     width: 40%;
     padding-right: 6%;
@@ -318,7 +346,7 @@ button {
     align-items: flex-start;
     flex-direction: column;
   }
-  
+
   .header-links ul li:not(:last-child) {
     margin-left: 0;
     margin-bottom: 1vw;
@@ -412,15 +440,31 @@ button {
 }
 
 @keyframes jump {
-  0% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, -50%); }
-  100% { transform: translate(-50%, 0); }
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes jump-mobile {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(0, -50%); }
-  100% { transform: translate(0, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, -50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -452,26 +496,26 @@ button {
     margin-bottom: 6.66vw;
     animation: jump-mobile 1.25s infinite;
   }
-  
+
   .hero-scroll img {
     width: 10.66vw;
   }
-  
+
   .hero-youtube {
     position: static;
     justify-content: center;
     margin-bottom: 17.73vw;
   }
-  
+
   .hero-youtube img {
     width: 9.33vw;
     margin-left: 2.33vw;
   }
-  
+
   .hero-price {
     position: static;
   }
-  
+
   .hero-price img {
     width: 48.5vw;
   }
@@ -498,11 +542,11 @@ button {
     background-color: #1BD741;
     border-right: 3px solid white;
   }
-  
+
   .hero-mobile-btn .whatsapp img {
     width: 5.33vw;
   }
-  
+
   .hero-mobile-btn .details {
     display: flex;
     align-items: center;
@@ -531,7 +575,7 @@ button {
 ================================================== */
 .project .text-block {
   text-align: center;
-  width: 57%;
+  width: 58%;
   margin: 0 auto;
   padding: 5.5vw 0;
   font-weight: 100;
@@ -660,35 +704,35 @@ button {
     flex-direction: column-reverse;
     align-items: flex-end;
   }
-  
+
   .project .project-block-1 .bg {
     display: none;
   }
-  
+
   .project .project-block-1 .project-img {
     flex: 0;
     width: 86%;
     margin-bottom: 14vw;
   }
-  
+
   .project .project-block-1 .project-img img {
     width: 100%;
   }
-  
+
   .project .project-block-1 .project-text {
     padding: 0;
     width: 86%;
     padding-left: 14vw;
   }
-  
+
   .project .project-block-1 h2 {
     margin-bottom: 6vw;
   }
-  
+
   .project .project-block-1 p {
     line-height: 1.33;
   }
-  
+
   .project .project-block-1 p:not(:last-child) {
     margin-bottom: 6vw;
   }
@@ -706,12 +750,12 @@ button {
     overflow: hidden;
     transition: all .5s ease;
   }
-  
+
   .project .project-block-1 .collapse.show {
     max-height: 100vw;
     margin-bottom: 6vw;
   }
-  
+
   .project .project-block-1 .project-partners {
     margin-top: 14vw;
     text-align: center;
@@ -722,12 +766,12 @@ button {
   .project .project-block-1 .project-partners p {
     margin-bottom: 4vw;
   }
-  
+
   .project .project-block-1 .project-partners .imgs img:first-child {
     margin-left: 16vw;
     width: 22.66vw;
   }
-  
+
   .project .project-block-1 .project-partners .imgs img:last-child {
     width: 35vw;
   }
@@ -739,7 +783,7 @@ button {
     align-items: flex-end;
     margin-top: 0;
   }
-  
+
   .project .project-block-2 .project-img {
     flex: 0;
     z-index: 2;
@@ -750,14 +794,14 @@ button {
   .project .project-block-2 .project-img img {
     width: 100%;
   }
-  
+
   .project .project-block-2 .project-text {
     padding: 0;
     line-height: 1.36;
     width: 70%;
     margin: 0 auto;
   }
-  
+
   .project .project-block-2 .project-star {
     position: static;
     left: 0;
@@ -765,7 +809,7 @@ button {
     transform: none;
     width: 100%;
   }
-  
+
   .project .project-block-2 .project-star img {
     width: 100%;
   }
@@ -1043,11 +1087,11 @@ button {
   .the-appartments .appartment-preview .rooms-number {
     font-size: 15.73vw;
   }
-  
+
   .the-appartments .appartment-preview .building {
     margin: 1vw 0;
   }
-  
+
   .the-appartments .appartment-preview .specifications {
     margin-top: 2.4vw;
   }
@@ -1101,13 +1145,13 @@ button {
     column-gap: 2vw;
     width: 100%;
   }
-  
+
   .typical-appartments .tab-link {
     width: auto;
     height: 8.3vw;
     font-size: inherit;
   }
-  
+
   .typical-appartments .tab-link:not(:last-child) {
     margin-left: 0;
   }
@@ -1133,7 +1177,7 @@ button {
     margin-left: 1.33vw;
     width: 3.33vw;
   }
-  
+
   .typical-appartments .appartment-download img:last-child {
     width: 8vw;
   }
@@ -1231,12 +1275,12 @@ button {
     width: 77%;
     margin-bottom: 11.5vw;
   }
-  
+
   .environment-map img,
   .environment-img img {
     width: 100%;
   }
-  
+
   .environment-text {
     position: static;
     width: 72%;
@@ -1488,25 +1532,25 @@ button {
   .company-block-1 .text-block {
     width: 70%;
   }
-  
+
   .company-block-1 h2 {
     margin-bottom: 4.4vw;
   }
-  
+
   .company-block-1 .company-logo {
     width: 27.5vw;
     margin-bottom: 5.15vw;
   }
-  
+
   .company-block-1 p {
     margin-bottom: 9.3vw;
     line-height: 1.36;
   }
-  
+
   .company-block-1 .company-icons ul li:not(:last-child) {
     margin-left: 7vw;
   }
-  
+
   .company-block-1 .company-icons img {
     margin-bottom: 2.25vw;
     width: 15.6vw;
@@ -1516,11 +1560,11 @@ button {
     padding: 25vw 0 8.66vw 0;
     background-color: var(--color-primary-dark);
   }
-  
+
   .company-block-2 .bg {
     display: none;
   }
-  
+
   .company-block-2 .container {
     flex-direction: column;
     width: 100%;
@@ -1535,29 +1579,29 @@ button {
   .company-block-2 .imgs figure {
     padding: 0;
   }
-  
+
   .company-block-2 .imgs figcaption {
     right: 3vw;
     bottom: 1.5vw;
   }
-  
+
   .company-block-2 .text-block {
     flex: 0;
     margin-bottom: 13.6vw;
     text-align: center;
   }
-  
+
   .company-block-2 .text-block img {
     width: 66.6vw;
     margin-bottom: 7.5vw;
   }
-  
+
   .company-block-2 .text-block p {
     width: 70vw;
     line-height: 1.36;
     font-weight: 300;
   }
-  
+
   .company-block-2 .text-block p:not(:last-child) {
     margin-bottom: 5vw;
   }
@@ -1565,12 +1609,12 @@ button {
   .company-block-3 {
     padding: 0 0 10.66vw 0;
   }
-  
+
   .company-block-3 .container {
     margin: 0 auto;
     width: 100%;
   }
-  
+
   .company-block-3 .imgs {
     color: white;
   }
@@ -1583,24 +1627,24 @@ button {
   .company-block-3 .imgs figure {
     padding: 0;
   }
-  
+
   .company-block-3 .imgs figcaption {
     right: 3vw;
     bottom: 1.5vw;
   }
-  
+
   .company-block-3 .company-info {
     margin-bottom: 12vw;
     grid-template-columns: 1fr;
     row-gap: 5.33vw;
     text-align: center;
   }
-  
+
   .company-block-3 .company-info .img-block {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
   }
-  
+
   .company-block-3 .company-info .img-block,
   .company-block-3 .company-info .text-block {
     display: flex;
@@ -1608,7 +1652,7 @@ button {
     justify-content: flex-start;
     align-items: center;
   }
-  
+
   .company-block-3 .company-info .img-block img {
     width: 35vw;
   }
@@ -1619,7 +1663,7 @@ button {
     margin-right: auto;
     line-height: 1.33;
   }
-  
+
   .company-block-3 .company-info p:not(:last-child) {
     margin-bottom: 4vw;
   }
@@ -1633,16 +1677,16 @@ button {
     overflow: hidden;
     transition: all .5s ease;
   }
-  
+
   .company-block-3 .company-info .collapse.show {
     max-height: 41vw;
     margin-bottom: 4vw;
   }
-  
+
   .company-block-3 .company-info .text-block img {
     height: 16vw;
   }
-  
+
   .company-block-3 .bg {
     width: 100%;
     height: 48.8vw;
@@ -1686,13 +1730,20 @@ button {
 
 .footer form {
   margin-bottom: 5.2vw;
+  width: 50%;
 }
 
 .footer .inputs {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin-bottom: 2.6vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .inputs>div {
+  width: 32%;
 }
 
 .footer .inputs input {
@@ -1704,11 +1755,18 @@ button {
   border: 1px solid white;
   padding-right: 1.15vw;
   width: 14.9vw;
+  width: 100%;
   transition: background-color .5s ease;
 }
 
+
+.footer .inputs label.error {
+  display: block;
+  text-align: right;
+}
+
 .footer .inputs input:focus {
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, .1);
 }
 
 .footer .inputs input:not(:last-child) {
@@ -1733,7 +1791,7 @@ button {
 
 .footer p,
 .footer a {
-  font-size: .75vw!important;
+  font-size: .75vw !important;
 }
 
 .footer a {
@@ -1744,11 +1802,17 @@ button {
 @media (max-width: 1023.98px) {
   .footer .text-block {
     bottom: auto;
-    top: 47%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 82%;
+    /* transform: translate(-50%, -50%); */
+    width: 70%;
     margin-bottom: 0;
+    padding: 10% 0;
+  }
+
+  .footer .inputs>div {
+    width: 100%;
+    margin-bottom: 5.33vw;
   }
 
   .footer h2 {
@@ -1758,6 +1822,7 @@ button {
 
   .footer form {
     margin-bottom: 19.3vw;
+    width: 100%;
   }
 
   .footer .inputs {
@@ -1765,21 +1830,25 @@ button {
     align-items: center;
     justify-content: center;
     margin-bottom: 7.73vw;
+    margin-bottom: 0;
   }
 
   .footer .inputs input {
     height: 10vw;
     padding-right: 2.93vw;
     width: 70vw;
+    width: 100%;
   }
 
   .footer .inputs input:not(:last-child) {
     margin-left: 0;
     margin-bottom: 5.33vw;
+    margin-bottom: 0;
   }
 
   .footer .btn {
     width: 70vw;
+    width: 100%;
   }
 
   .footer-logo {
@@ -1792,7 +1861,7 @@ button {
 
   .footer p,
   .footer a {
-    font-size: 4vw!important;
+    font-size: 4vw !important;
   }
 
   .footer a {
@@ -1888,7 +1957,7 @@ button {
   justify-content: center;
 }
 
-.swiper-navigation .swiper-button-next, 
+.swiper-navigation .swiper-button-next,
 .swiper-navigation .swiper-button-prev {
   position: absolute;
   top: 50%;
@@ -1906,7 +1975,7 @@ button {
   left: 40%;
 }
 
-.swiper-navigation .swiper-button-next:after, 
+.swiper-navigation .swiper-button-next:after,
 .swiper-navigation .swiper-button-prev:after {
   width: 2vw;
   height: 1.6vw;
@@ -1955,7 +2024,7 @@ button {
     min-height: 4.13vw;
   }
 
-  .swiper-navigation .swiper-button-next, 
+  .swiper-navigation .swiper-button-next,
   .swiper-navigation .swiper-button-prev {
     width: 5vw;
     height: 4.13vw;
@@ -1964,12 +2033,12 @@ button {
   .swiper-navigation .swiper-button-next {
     right: 30%;
   }
-  
+
   .swiper-navigation .swiper-button-prev {
     left: 30%;
   }
 
-  .swiper-navigation .swiper-button-next:after, 
+  .swiper-navigation .swiper-button-next:after,
   .swiper-navigation .swiper-button-prev:after {
     width: 5vw;
     height: 4.13vw;

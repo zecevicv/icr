@@ -155,7 +155,7 @@ window.addEventListener('load', () => {
     });
   });
 
-  
+
 
   document.querySelectorAll('.typical-appartments .swiper-container').forEach((slider) => {
     new Swiper(slider, {
@@ -270,3 +270,327 @@ AOS.init({
   duration: 800,
   offset: 300
 });
+
+
+
+function blockpage() {
+  $(".blockpage").addClass('active');
+}
+
+function un_blockpage() {
+  $(".blockpage").removeClass('active');
+}
+
+
+$(document).ready(function () {
+
+
+
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+
+    i;
+
+  jQuery("form").append(jQuery("<input>").attr({
+
+      type: 'hidden',
+      name: 'platform',
+      value: (window.innerWidth > 1024 ? 'desktop' : 'mobile')
+    }
+
+  ));
+
+
+
+  for (i = 0; i < sURLVariables.length; i++) {
+
+    sParameterName = sURLVariables[i].split('=');
+    jQuery("form").append(jQuery("<input>").attr({
+
+        type: 'hidden',
+        name: sParameterName[0],
+        value: sParameterName[1]
+      }
+
+    ));
+
+  }
+
+
+  $("._menu button").on("click", function () {
+
+    $("body").toggleClass('open_menu');
+
+  });
+
+
+
+  $(document).on("click", ".scrollto", function (e) {
+
+    e.preventDefault();
+
+    var $e = $(this),
+      $elem = $e.attr("href");
+
+    $("body").removeClass('open_menu');
+
+    $('html, body').animate({
+
+      scrollTop: $($elem).offset().top
+
+    }, 1000);
+
+  });
+
+
+
+  $(".swiper-slide").on("click", function () {
+
+    var modal = $(this).attr('data-modal');
+
+    $(".myModal").removeClass('active');
+
+    $("#myModal" + modal).addClass('active');
+
+  });
+
+  $(".close_btn a").on("click", function (event) {
+
+    event.preventDefault();
+
+    $(".myModal").removeClass('active');
+
+  });
+
+
+
+
+
+  $(".send_event").on("click", function (event) {
+
+    var category = $(this).attr('data-category');
+
+    var action = $(this).attr('data-action');
+
+    var label = $(this).attr('data-label');
+
+    var data = {
+      'event': 'tara_whiteAngels',
+      'eventdata': {
+        'category': category,
+        'action': action,
+        'label': label
+      }
+    };
+
+    console.log(data);
+
+    dataLayer.push(data);
+
+  });
+
+
+
+  $form = $("[name='myfrom']");
+
+  $.validator.addMethod("custom_fullname", function (value, element) {
+    return (value.trim().split(/\s+/).length >= 2);
+  });
+
+
+  $.validator.addMethod("isPhone", function (value, element) {
+    var reg = /^0([50|51|52|53|54|55|56|57|58|59]{2})-{0,1}?[0-9]{7}$/;
+    //   var reg = /^0([50|52|53|54|57|58|72|74|76|77]{2}|[2|3|4|8|9]{1})-{0,1}?[0-9]{7}$/;
+    return reg.test(value);
+
+  });
+
+
+  $.validator.addMethod("custom_hasNumber", function (value, element) {
+
+    var matches = value.match(/\d+/g);
+    return !matches;
+
+  });
+
+
+  $.validator.addMethod("custom_hasEnglish", function (value, element) {
+
+    var reg = /^[A-Za-z0-9]*$/;
+    return true;
+
+  });
+
+
+  $.validator.addMethod("custom_onlyHebrew", function (value, element) {
+
+    var reg = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?A-Za-z0-9]+/;
+    return !reg.test(value);
+
+  });
+
+
+
+  $.validator.addMethod("custom_specialCharacters", function (value, element) {
+
+    var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|<>\/?]+/;
+    return !format.test(value);
+
+  });
+
+
+
+  $form.validate({
+
+    rules: {
+
+      firstname: {
+
+        required: true,
+
+        minlength: 2,
+
+        custom_hasNumber: true,
+
+        custom_specialCharacters: true,
+
+        custom_fullname: true,
+
+        number: false,
+
+      },
+
+
+
+      phone: {
+
+        number: true,
+
+        required: true,
+
+        minlength: 9,
+
+        maxlength: 10,
+
+        isPhone: true
+
+      },
+
+      email: {
+
+        required: true,
+
+        email: true,
+
+        minlength: 5
+
+      },
+
+      // privacy:{
+
+      //   required:true,
+
+      // },
+
+      // divur:{
+
+      //   required:false,
+
+      // },
+
+    },
+    messages: {
+      firstname: 'שם מלא הינו שדה חובה',
+      phone: 'טלפון הינו שדה חובה',
+      email: 'דוא"ל" הינו שדה חובה'
+    },
+
+    submitHandler: function (form) {
+
+
+      blockpage();
+
+      var data = $form.serializeObject();
+
+      $.post('bamby.php', {
+        action: 'submit',
+        data: data
+      }, function (data) {
+
+        if (data.result == 'success') {
+          $form[0].reset();
+          swal("תודה", "פרטיך התקבלו בהצלחה!", "success");
+        } else {
+          swal("אופס..", "הפרטים שלך כבר רשומים אצלנו, נהיה בקשר...", "error");
+        }
+
+        un_blockpage();
+
+      }, "json");
+
+
+
+    },
+
+    highlight: function (error, element) {
+
+
+
+    },
+
+  });
+
+  // $("#form-part").css("display", "none");
+  // $("#thank-pop").css("display", "initial");
+
+  $.fn.serializeObject = function ()
+
+  {
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function () {
+
+      if (o[this.name] !== undefined) {
+
+        if (!o[this.name].push) {
+
+          o[this.name] = [o[this.name]];
+        }
+
+        if (this.value != '') {
+
+          o[this.name].push(this.value || '');
+
+        }
+
+      } else {
+
+        if (this.value != '') {
+
+          o[this.name] = this.value || '';
+
+        }
+
+      }
+
+    });
+
+    return o;
+
+  };
+
+});
+
+
+
+function fb_share(argument) {
+
+  event.preventDefault();
+
+  window.open(argument.getAttribute('href'), 'fbShareWindow', 'height=450, width=550, top=' + (document.body.innerHeight / 2 - 275) + ', left=' + (document.body.innerWidth / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+
+  return false;
+
+}
